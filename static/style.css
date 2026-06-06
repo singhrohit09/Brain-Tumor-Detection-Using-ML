@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #2563eb
+    );
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:600px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+h1{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:gray;
+    margin-bottom:30px;
+}
+
+.upload-label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+input[type=file]{
+    width:100%;
+    padding:10px;
+    border:2px dashed #2563eb;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.result-box{
+    margin-top:30px;
+    padding:20px;
+    background:#f3f8ff;
+    border-radius:15px;
+}
+
+.result-box img{
+    margin-top:15px;
+    border-radius:12px;
+    width:300px;
+    height:auto;
+}
+
+.result-box h3{
+    margin-top:15px;
+    color:#16a34a;
+    font-size:28px;
+}
+
+.result-box p{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+}

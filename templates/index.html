@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🧠 Brain Tumor Detection</h1>
+        <p class="subtitle">
+            AI Powered MRI Scan Analysis System
+        </p>
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+
+            <label class="upload-label">
+                Select MRI Image
+            </label>
+
+            <input type="file" name="image" required>
+
+            <button type="submit">
+                Analyze Scan
+            </button>
+
+        </form>
+
+        {% if result %}
+
+        <div class="result-box">
+
+            <h2>Prediction Result</h2>
+
+            <img src="{{ image_path }}" width="300">
+
+            <h3>{{ result }}</h3>
+
+            <p>
+                Confidence : {{ confidence }}%
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
